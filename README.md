@@ -1,7 +1,7 @@
 # Introduction
 `go-sms` provide simple and clean API interface using Isms and sms123 provider. 
 
-## Installation
+### Installation
 Get the package
 ```
 go get github.com/Kasitaw/go-sms
@@ -19,7 +19,7 @@ go build main.go
 
 Follow `configurations` section. 
 
-## Configurations
+### Configurations
 Create `credential.yaml` file inside `configs` folder and put below code:
 
 ```yaml
@@ -40,12 +40,12 @@ drivers:
 default: "isms"
 ```
 
-## Run
+### Run
 `go run main.go`
 
 Server will be run on port `:2346`.
 
-## Create `supervisord` config to ensure the server keeps restarting if down (Adjust to your environment's setup)
+### Create `supervisord` config to ensure the server keeps restarting if down (Adjust to your environment's setup)
 ```
 # /etc/supervisor/conf.d/gosms.conf
 
