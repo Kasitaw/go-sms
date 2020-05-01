@@ -51,7 +51,8 @@ Server will be run on port `:2346`.
 
 [program:go-sms]
 process_name=%(program_name)s_%(process_num)02d
-command=./home/<user-directory>/go/src/github.com/Kasitaw/go-sms/main
+directory=/home/<user-directory>/go/src/github.com/Kasitaw/go-sms
+command=/home/<user-directory>/go/src/github.com/Kasitaw/go-sms/main
 autostart=true
 autorestart=true
 user=your-user
