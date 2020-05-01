@@ -45,7 +45,7 @@ default: "isms"
 
 Server will be run on port `:2346`.
 
-### Create `supervisord` config to ensure the server keeps restarting if down (Adjust to your environment's setup)
+### Create supervisord config to ensure the server keeps restarting if down (Adjust to your environment's setup)
 ```
 # /etc/supervisor/conf.d/gosms.conf
 
