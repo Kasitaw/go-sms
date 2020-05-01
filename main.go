@@ -12,6 +12,9 @@ func main() {
 	var sms tools.SmsInterface
 	var dataObject tools.DataObject
 
+	// Set to release/production mode
+	gin.SetMode(gin.ReleaseMode)
+
 	// Creates a gin router with default middleware:
 	// logger and recovery (crash-free) middleware
 	router := gin.Default()
@@ -27,6 +30,7 @@ func main() {
 		provider = configs.Parse()
 		driver = configs.GetDriver(provider.Drivers, provider.Default)
 
+		// Decide sms provider based on default setting
 		switch provider.Default {
 		case "sms123":
 			sms = &tools.Sms123{}
@@ -39,6 +43,7 @@ func main() {
 			Config: driver,
 			Context: c,
 		}
+		// Send message to destination number.
 		sms.Send(dataObject)
 	})
 
