@@ -93,7 +93,7 @@ func (s *Isms) getCode(code string) string {
 
 // Isms implementation of "send" method.
 func (s *Isms) Send(d DataObject) {
-	url := fmt.Sprintf("%s?un=%s&pwd=%s&dstno=%s&msg=%s&agreedterm=yes&type=2",
+	url := fmt.Sprintf("%s?un=%s&pwd=%s&dstno=%s&msg=%s&agreedterm=yes&type=1",
 		d.Config.Url,
 		url.QueryEscape(d.Config.Username),
 		url.QueryEscape(d.Config.Password),
